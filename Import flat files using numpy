@@ -1,43 +1,43 @@
 #Import data flat files .txt, .csv
 #Reading a text file
-   [1]: filename = 'huck_finn.txt'
-  [2]: file = open(filename, mode='r')  # 'r' is to read
-  [3]: text = file.read()
-  [4]: file.close()
+      filename = 'huck_finn.txt'
+    file = open(filename, mode='r')  # 'r' is to read
+    text = file.read()
+    file.close()
  #Printing a text file
-   [5]: print(text)
+     print(text)
  #Writing to a file
-    [1]: filename = 'huck_finn.txt'
-  [2]: file = open(filename, mode='w')  # 'w' is to write
-  [3]: file.close()
+       filename = 'huck_finn.txt'
+    file = open(filename, mode='w')  # 'w' is to write
+    file.close()
 #using context manager with
-#with open('huck_finn.txt', 'r') as file:
+#with open('huck_finn.txt', 'r') as file 
 #print(file.read())
 #Flat files
 ##Text files containing records That is, table data
-##Record: row of fields or attributes 
-##Column: feature or attribute
+##Record  row of fields or attributes 
+##Column  feature or attribute
 #File extension
 ##.csv - Comma separated values .txt - Text file
 ##commas, tabs - Delimiters
 
 #importing flat files using NumPy
   ## only when all the data is numeric
-  [1]: import numpy as np
-  [2]: filename = 'MNIST.txt'
-  [3]: data = np.loadtxt(filename, delimiter=',')
-  [4]: data
+     import numpy as np
+    filename = 'MNIST.txt'
+    data = np.loadtxt(filename, delimiter=',')
+    data
   #Customizing your NumPy import
-In [1]: import numpy as np
-In [2]: filename = 'MNIST_header.txt'
-In [3]: data = np.loadtxt(filename, delimiter=',',skiprows=1)
-In [4]: print(data)
+    import numpy as np
+   filename = 'MNIST_header.txt'
+   data = np.loadtxt(filename, delimiter=',',skiprows=1)
+   print(data)
   #Customizing your NumPy import
-  In [1]: import numpy as np
- In [2]: filename = 'MNIST_header.txt'
- In [3]: data = np.loadtxt(filename, delimiter=',', skiprows=1, 
+      import numpy as np
+    filename = 'MNIST_header.txt'
+    data = np.loadtxt(filename, delimiter=',', skiprows=1, 
 usecols=[0, 2])
 
 #Customizing your NumPy import
- In [1]: data = np.loadtxt(filename, delimiter=',',
+     data = np.loadtxt(filename, delimiter=',',
  dtype=str)
